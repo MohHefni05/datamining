@@ -1,0 +1,853 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Material Design theme for MkDocs">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/tugas3/">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Tugas 3 - Material for MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#implementasi-metode-k-modes-dan-k-prototype-dengan-menggunakan-bahasa-pemrograman-python" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" aria-label="Material for MkDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Material for MkDocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Tugas 3
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    squidfunk/mkdocs-material
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        pengantar
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Material for MkDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    squidfunk/mkdocs-material
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="pengantar" class="md-nav__link">
+      pengantar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tugas1/" title="Tugas 1" class="md-nav__link">
+      Tugas 1
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tugas2/" title="Tugas 2" class="md-nav__link">
+      Tugas 2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tugas 3
+      </label>
+    
+    <a href="./" title="Tugas 3" class="md-nav__link md-nav__link--active">
+      Tugas 3
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#k-modes-clustering" class="md-nav__link">
+    K-Modes Clustering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-prototype-clustering" class="md-nav__link">
+    K-Prototype Clustering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-k-modes-dan-k-prototype-menggunakan-bahasa-pemrograman-python" class="md-nav__link">
+    Implementasi  K-Modes dan K-Prototype menggunakan bahasa pemrograman python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-modes-clustering_1" class="md-nav__link">
+    K-Modes Clustering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tugas4/" title="Tugas 4" class="md-nav__link">
+      Tugas 4
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#k-modes-clustering" class="md-nav__link">
+    K-Modes Clustering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-prototype-clustering" class="md-nav__link">
+    K-Prototype Clustering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-k-modes-dan-k-prototype-menggunakan-bahasa-pemrograman-python" class="md-nav__link">
+    Implementasi  K-Modes dan K-Prototype menggunakan bahasa pemrograman python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-modes-clustering_1" class="md-nav__link">
+    K-Modes Clustering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="implementasi-metode-k-modes-dan-k-prototype-dengan-menggunakan-bahasa-pemrograman-python">Implementasi Metode K-Modes dan K-Prototype dengan menggunakan bahasa pemrograman python</h1>
+<p><strong>Clustering</strong></p>
+<p style="text-align:justify;">Clustering adalah suatu metode untuk mengelompokkan data berdasarkan ukuran kemiripan data tersebut. Pada metode clustering pengelompokan datanya tidak harus sama, akan tetapi hanya kemiripan data tersebut yang didapatkan berdasarkan pada kedekatan suatu karakteristik sample yang, ada dengan menghitung jarak salah satunya dengan menggunakan rumus ecluidian distance. pada dasarnya, metode clustering mengoptimumkan pusat cluster(centroid) untuk melakukan pengelompokan.</p>
+
+<p style="text-align:justify;">dalam hal ini metode clusting biasa digunakan dalam Segmentasi Pasar, pemetaan wilayah, Manajement marketing, dan lain-lain.</p>
+
+<p style="text-align:justify;">Salah satu algoritma clustring yang banyak dipakai adalah K-Means clustering. Hal ini memungkinkan untuk mengelompokkan data sesuai dengan kesamaan yang ada di antara mereka dalam k cluster, diberikan sebagai input ke algoritma.</p>
+
+<h5></h5>
+
+<h5 id="k-modes-clustering">K-Modes Clustering</h5>
+<p style="text-align:justify;">K-Modes clustering adalah turunan dari metode K-Means clustering. Pada metode K-Means hanya bekerja pada data yang nilainya numeric dan tidak akan bekerja jika data yang akan cluster adalah nilainya kategorikal. K-Modes berkerja mirip seperti K-Means, akan tetapi metode ini di khususkan untuk mengelompokkan data yang nilainya adalah kategorikal.K-Modes berkerja dengan menggunakan metode berbasis frekuensi untuk memperbarui modus dalam proses pengelompokan dan mengkuantifikasi total ketidakcocokan antara dua objek. semakin kecil jumlah ini, semakin mirip kedua objek.</p>
+
+<h5 id="k-prototype-clustering">K-Prototype Clustering</h5>
+<p style="text-align:justify;">K-Prototype clustering merupakan metode clustring gabungan dari K-Means dan K-Modes. Metode ini digunakan untuk mengelompokkan data yang memiliki attribut Campuran. yaitu numeric dan categorical</p>
+
+<h4 id="implementasi-k-modes-dan-k-prototype-menggunakan-bahasa-pemrograman-python">Implementasi  K-Modes dan K-Prototype menggunakan bahasa pemrograman python</h4>
+<h5 id="k-modes-clustering_1">K-Modes Clustering</h5>
+<p style="text-align:justify;">untuk pengimplementasian K-Prototype kita menggunakan data yang dapat di download <a href="http://github.com/dkaslovsky/Coupled-Biased-Random-Walks">disini</a> Setelah di download kita load data tersebut ke dalam python dengan dalam bentuk data frame.Pertama kali yang dapat kita lakukan adalah memuat data tersebut menggunaka libarary pandas. </p>
+
+<pre><code class="python">import pandas as pd
+data = pd.read_csv('CBRW_paper_example.csv',delimiter=',')
+df = pd.DataFrame(data)
+df.style.hide_index()
+</code></pre>
+
+<p style="text-align:justify;"> Untuk Melihat gambar data yang sudah di load di python Silahkan <a href="http://github.com/MohHefni05/filedatamining/blob/master/docs/assets/images/tugas3/1.png">Klik disini</a></p>
+
+<p style="text-align:justify;">kita dapat menggunakan KModes yang merupakan library dari kmodes untuk melakukan clustering. data kategorikal dalam contoh ini digunakan k=3 untuk mengelompokkan menjadi 3 cluster. dari hasil proses clustering yang dilakukan, hasilnya dapat digabungkan dengan data yang telah ada dengan menambahkan attribut Cluster agar setiap baris data memiliki clusternya masing-msaing.
+
+
+
+<pre><code class="python">from kmodes.kmodes import KModes
+
+k = 3
+df_dummy = pd.get_dummies(df)
+data_set = df_dummy.reset_index().values
+
+kmodes_cao = KModes(n_clusters=k, init='Cao', verbose=1)
+cluster = kmodes_cao.fit(data_set)
+data['Cluster'] = cluster.labels_
+
+(data,k)
+
+</code></pre>
+
+
+Output
+
+
+<pre><code class="python">Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run 1, iteration: 1/100, moves: 0, cost: 33.0
+(    Gender Education  Marriage  Income Cheat?  Cluster
+ 0     male    master  divorced     low    yes        2
+ 1   female    master   married  medium     no        1
+ 2     male    master    single    high     no        0
+ 3     male  bachelor   married  medium     no        1
+ 4   female    master  divorced    high     no        0
+ 5     male       PhD   married    high     no        0
+ 6     male    master    single    high     no        0
+ 7   female       PhD    single  medium     no        1
+ 8     male       PhD   married  medium     no        1
+ 9     male  bachelor    single     low     no        0
+ 10  female       PhD   married  medium     no        1
+ 11    male    master    single     low     no        0,
+ 3)
+</code></pre>
+
+
+<p style="text-align:justify;">Hasil dari clustering tersebut dapat kita visualisasikan dalam bentuk plot dengan menggunakan library matpotlib.
+
+
+<pre><code class="python">import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+
+pca = PCA(2)
+plot_columns = pca.fit_transform(df_dummy.iloc[:,0:6])
+plt.title(&quot;Hasil Klustering K-Modes&quot;)
+plt.scatter(x=plot_columns[:,1], y=plot_columns[:,0], c=df_dummy[&quot;Cluster&quot;], s=30)
+plt.show()
+</code></pre>
+
+
+<p style="text-align:justify;"> Untuk Melihat gambar data Hasil dari clustering tersebut dapat kita visualisasikan dalam bentuk plot  Silahkan <a href="http://github.com/MohHefni05/filedatamining/blob/master/docs/assets/images/tugas3/2.png">Klik disini</a></p>
+
+##### <h5>K-Prototype Clustering</h5>
+
+<p style="text-align:justify;">untuk pengimplementasian K-Prototype kita menggunakan data yang dapat di download <a href="http://data.bandung.go.id/dataset/jumlah-penduduk-berdasarkan-tingkat-pendidikan-menurut-kecamatan/resource/70d351e9-d4ca-418d-b0e1-dd3c44b4eee2">disini</a> Setelah di download kita load data tersebut ke dalam python dengan dalam bentuk data frame </p>
+
+<pre><code class="python">import pandas as pd
+data = pd.read_csv('data-jumlah-penduduk-berdasarkan-tingkat-pendidikan-berdasarkan-kelurahan-2016.csv',delimiter=',')
+df = pd.DataFrame(data)
+df.style.hide_index()
+
+</code></pre>
+
+
+<p style="text-align:justify;"> Untuk Melihat gambar data yang sudah di load di python Silahkan <a href="http://github.com/MohHefni05/filedatamining/blob/master/docs/assets/images/tugas3/3.png">Klik disini</a></p>
+
+<p style="text-align:justify;">Kita dapat menggunakan Kprototype yang merupakan library dari kmodes untuk melakukan clustering data campuran dari numerik dan kategorikal. dalam contoh ini digunakan k=5 untuk mengelompokkan menjadi 5 cluster. dengan menggunakan source code dibawah ini :</p> 
+
+<pre><code class="python">from kmodes.kprototypes import KPrototypes
+
+k = 5
+df_dummy = pd.get_dummies(df)
+data_set = df_dummy.reset_index().values
+
+kproto = KPrototypes(n_clusters=k, init='Cao', verbose=2)
+cluster = kproto.fit(data_set, categorical=[0, 1, 2, 3, 5])
+data['Cluster'] = cluster.labels_
+
+(data,k)
+
+</code></pre>
+
+
+Output
+
+
+<pre><code>Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 1, iteration: 1/100, moves: 16, ncost: 636479607.0364193
+Run: 1, iteration: 2/100, moves: 7, ncost: 630212718.574795
+Run: 1, iteration: 3/100, moves: 2, ncost: 628042397.5836812
+Run: 1, iteration: 4/100, moves: 4, ncost: 623058585.3959843
+Run: 1, iteration: 5/100, moves: 1, ncost: 622727799.4007367
+Run: 1, iteration: 6/100, moves: 0, ncost: 622727799.4007367
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 2, iteration: 1/100, moves: 18, ncost: 823978517.8455426
+Run: 2, iteration: 2/100, moves: 11, ncost: 798644599.8040055
+Run: 2, iteration: 3/100, moves: 7, ncost: 780227899.9686792
+Run: 2, iteration: 4/100, moves: 15, ncost: 733323569.2927341
+Run: 2, iteration: 5/100, moves: 11, ncost: 708912804.4196088
+Run: 2, iteration: 6/100, moves: 6, ncost: 697874467.3169609
+Run: 2, iteration: 7/100, moves: 3, ncost: 694040289.0742761
+Run: 2, iteration: 8/100, moves: 0, ncost: 694040289.0742761
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 3, iteration: 1/100, moves: 16, ncost: 904299319.6226357
+Run: 3, iteration: 2/100, moves: 8, ncost: 883587133.7567929
+Run: 3, iteration: 3/100, moves: 11, ncost: 821636326.472323
+Run: 3, iteration: 4/100, moves: 21, ncost: 723545530.8438975
+Run: 3, iteration: 5/100, moves: 8, ncost: 706740873.6699655
+Run: 3, iteration: 6/100, moves: 5, ncost: 697874467.3169609
+Run: 3, iteration: 7/100, moves: 3, ncost: 694040289.0742761
+Run: 3, iteration: 8/100, moves: 0, ncost: 694040289.0742761
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 4, iteration: 1/100, moves: 23, ncost: 654803683.5107675
+Run: 4, iteration: 2/100, moves: 7, ncost: 637589003.758549
+Run: 4, iteration: 3/100, moves: 7, ncost: 630212718.574795
+Run: 4, iteration: 4/100, moves: 2, ncost: 628042397.5836811
+Run: 4, iteration: 5/100, moves: 4, ncost: 623058585.3959844
+Run: 4, iteration: 6/100, moves: 1, ncost: 622727799.4007367
+Run: 4, iteration: 7/100, moves: 0, ncost: 622727799.4007367
+Init: initializing centroids
+Init: initializing clusters
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 5, iteration: 1/100, moves: 50, ncost: 721491218.9969732
+Run: 5, iteration: 2/100, moves: 16, ncost: 668126732.4372468
+Run: 5, iteration: 3/100, moves: 10, ncost: 641349282.3096949
+Run: 5, iteration: 4/100, moves: 7, ncost: 623283066.2318155
+Run: 5, iteration: 5/100, moves: 1, ncost: 622841558.4738488
+Run: 5, iteration: 6/100, moves: 0, ncost: 622841558.4738488
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 6, iteration: 1/100, moves: 17, ncost: 630478541.63358
+Run: 6, iteration: 2/100, moves: 1, ncost: 630054776.2317188
+Run: 6, iteration: 3/100, moves: 0, ncost: 630054776.2317188
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 7, iteration: 1/100, moves: 13, ncost: 710921054.1587718
+Run: 7, iteration: 2/100, moves: 7, ncost: 697874467.3169608
+Run: 7, iteration: 3/100, moves: 3, ncost: 694040289.0742761
+Run: 7, iteration: 4/100, moves: 0, ncost: 694040289.0742761
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 8, iteration: 1/100, moves: 26, ncost: 1219610889.672209
+Run: 8, iteration: 2/100, moves: 21, ncost: 1040901262.9659413
+Run: 8, iteration: 3/100, moves: 24, ncost: 851122244.6033916
+Run: 8, iteration: 4/100, moves: 13, ncost: 778672534.6107851
+Run: 8, iteration: 5/100, moves: 4, ncost: 769751856.0158658
+Run: 8, iteration: 6/100, moves: 13, ncost: 732854505.5140269
+Run: 8, iteration: 7/100, moves: 7, ncost: 718407069.5545243
+Run: 8, iteration: 8/100, moves: 14, ncost: 679827005.9510918
+Run: 8, iteration: 9/100, moves: 7, ncost: 664873853.1596735
+Run: 8, iteration: 10/100, moves: 6, ncost: 652359326.96503
+Run: 8, iteration: 11/100, moves: 6, ncost: 635201334.0977274
+Run: 8, iteration: 12/100, moves: 4, ncost: 630466187.7182717
+Run: 8, iteration: 13/100, moves: 1, ncost: 630019659.6844094
+Run: 8, iteration: 14/100, moves: 0, ncost: 630019659.6844094
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 9, iteration: 1/100, moves: 15, ncost: 636131660.8906584
+Run: 9, iteration: 2/100, moves: 3, ncost: 631667113.8925309
+Run: 9, iteration: 3/100, moves: 2, ncost: 630466187.7182717
+Run: 9, iteration: 4/100, moves: 1, ncost: 630019659.6844094
+Run: 9, iteration: 5/100, moves: 0, ncost: 630019659.6844094
+Init: initializing centroids
+Init: initializing clusters
+Starting iterations...
+Run: 10, iteration: 1/100, moves: 23, ncost: 630635605.3263967
+Run: 10, iteration: 2/100, moves: 3, ncost: 627551490.8965133
+Run: 10, iteration: 3/100, moves: 2, ncost: 625381169.9053993
+Run: 10, iteration: 4/100, moves: 4, ncost: 620397357.7177026
+Run: 10, iteration: 5/100, moves: 1, ncost: 620066571.7224548
+Run: 10, iteration: 6/100, moves: 0, ncost: 620066571.7224548
+Best run was number 10
+(      Nama Kecamatan  Nama Kelurahan  Belum Sekolah  Belum/Tidak Tamat SD  \
+ 0              Andir         Maleber    3042.000000           2027.000000   
+ 1              Andir  Dungus Cariang    2905.000000           2034.000000   
+ 2              Andir         Ciroyom    3194.000000           2120.000000   
+ 3              Andir     Kebon Jeruk    1839.000000           1483.000000   
+ 4              Andir          Garuda    1531.000000           1067.000000   
+ ..               ...             ...            ...                   ...   
+ 148      Ujungberung     Pasir Endah    2170.000000           1668.000000   
+ 149      Ujungberung      Pasir Jati    2582.000000           1884.000000   
+ 150      Ujungberung      Pasirwangi    2378.000000           1855.000000   
+ 151  Standar Deviasi             NaN    1150.875004            740.457369   
+ 152      Rata - Rata             NaN    2386.933775           1633.549669   
+
+         Tamat SD          SMP          SMA  Diploma I &amp; II  Diploma III  \
+ 0    2384.000000  3180.000000  7332.000000       92.000000   530.000000   
+ 1    2568.000000  3001.000000  6953.000000      109.000000   455.000000   
+ 2    2868.000000  3367.000000  6669.000000       62.000000   307.000000   
+ 3    1735.000000  2681.000000  5060.000000       63.000000   310.000000   
+ 4    1026.000000  1532.000000  3954.000000       52.000000   382.000000   
+ ..           ...          ...          ...             ...          ...   
+ 148  1243.000000  2022.000000  4911.000000      228.000000   731.000000   
+ 149  2175.000000  2563.000000  4697.000000      158.000000   607.000000   
+ 150  2430.000000  2444.000000  4199.000000      173.000000   415.000000   
+ 151  1342.716860  1120.725414  2322.125213       88.681969   381.834679   
+ 152  2099.430464  2245.158940  5068.701987      141.490066   598.311258   
+
+         Strata 1    Strata 2   Strata 3        Jumlah  Cluster  
+ 0    1481.000000   71.000000   5.000000  20144.000000        4  
+ 1    1257.000000   73.000000   6.000000  19361.000000        0  
+ 2     917.000000   39.000000   4.000000  19547.000000        0  
+ 3    1579.000000   70.000000   6.000000  14826.000000        0  
+ 4     992.000000   62.000000   3.000000  10601.000000        2  
+ ..           ...         ...        ...           ...      ...  
+ 148  1997.000000  257.000000  39.000000  15266.000000        0  
+ 149   942.000000   74.000000  10.000000  15692.000000        0  
+ 150   738.000000   61.000000  12.000000  14705.000000        0  
+ 151   957.858218  154.789891  26.614292   7101.739078        1  
+ 152  1519.768212  160.589404  22.860927  15876.794700        0  
+
+ [153 rows x 14 columns],
+ 5)
+</code></pre>
+
+
+
+<p style="text-align:justify;">Hasil dari clustering tersebut dapat kita visualisasikan dalam bentuk plot dengan menggunakan library matpotlib.</p> 
+
+<pre><code class="python">pca = PCA(2)
+plot_columns = pca.fit_transform(df_dummy.iloc[:,1:])
+plt.title(&quot;Hasil Klustering K-Prototype&quot;)
+plt.scatter(x=plot_columns[:,1], y=plot_columns[:,0], c=df_dummy[&quot;Cluster&quot;], s=30)
+plt.show()
+
+</code></pre>
+
+
+<p style="text-align:justify;"> Untuk Melihat gambar data Hasil dari clustering tersebut dapat kita visualisasikan dalam bentuk plot  Silahkan <a href="http://github.com/MohHefni05/filedatamining/blob/master/docs/assets/images/tugas3/4.png">Klik disini</a></p>
+
+<p style="text-align:justify;">NB : Maaf atas ketidaknyaman ini jika dalam melihat gambar mengunakan link saya sudah usahakan untuk menampilkan tetap tidak bisa
+
+
+
+<p style="text-align:justify;">Terima kasih
+
+<p style="text-align:justify;">Wassalamualaikum Warahmatuallahi Wabarakatuh
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tugas2/" title="Tugas 2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tugas 2
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../tugas4/" title="Tugas 4" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tugas 4
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2020 Martin Donath
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="http://struct.cc" target="_blank" rel="noopener" title="globe" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/squidfunk" target="_blank" rel="noopener" title="github-alt" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/squidfunk" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/squidfunk/" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.df00da5d.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
